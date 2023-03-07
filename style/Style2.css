@@ -1,0 +1,85 @@
+li {
+    display: inline;
+    padding:20px;
+    
+  
+   
+
+}
+header{
+  
+    width:100px;
+}
+
+
+
+ ol {
+    display: inline;
+    list-style-type: none;
+}
+nav{
+    background-color: #ccc;
+}
+
+hr {
+    background-color: rgb(244, 22, 22);
+    height: 10px;
+    width: 40px;
+    text-align: center;
+}
+
+
+h1{color: red;
+    
+font-size: 30px;
+margin-top: 40px;
+margin-left: 200px;
+padding: -130px;
+
+}
+
+
+
+ img {
+    height: 80px;
+   
+   
+    text-align: justify;
+}
+
+
+
+.fa-sharp fa-regular fa-square {
+    text-align: right;
+
+
+}
+
+
+a 
+{
+     text-decoration:none;
+}
+
+table  {
+
+   
+    display: block;
+  margin-left: 112px;
+  width: 80px;
+
+    
+}
+
+
+a:hover
+{
+    color: rgb(227, 22, 172);
+    cursor:grab;
+}
+
+
+ .f {
+    height: 40px;
+    background-color: #ccc;
+}
