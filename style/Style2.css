@@ -86,3 +86,7 @@ a:hover
     height: 400px;
     background-color: #ccc;
 }
+body
+{
+    background-color: antiquewhite;
+}
