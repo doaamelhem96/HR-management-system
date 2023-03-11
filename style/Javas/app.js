@@ -41,31 +41,32 @@ let employee7 = new Employee(1006, "Hadi Ahmad", "Finance", "Mid-Senior");
 
 
 Employee.prototype.render = function () {
-  let imageE1= document.createElement('img');
-imageE1.src=this.img;
-empForm.appendChild(imageE1);
+//   let diveE1= document.getElementById("card");
+// let imageE1= document.createElement('img');
+//  imageE1.src=this.img;
+//  diveE1.appendChild(imageE1);
 
-document.write(`<h5> Name: ${this.fullName}_____ID: ${createEmpId()}</h5>  <h5> Department: ${this.department}______ Level: ${this.level} </h5>  ${netSalary(salary)} `);
+document.write(`<h5>  Name: ${this.fullName}_____ID: ${createEmpId()}</h5>  <h4> Department: ${this.department}______ Level: ${this.level} </h4>  ${netSalary(salary)} `);
 
 }
 
 
 
-// employee1.salaryCalculater();
-// employee2.salaryCalculater();
-// employee3.salaryCalculater();
-// employee4.salaryCalculater();
-// employee5.salaryCalculater();
-// employee6.salaryCalculater();
-// employee7.salaryCalculater();
+employee1.salaryCalculater();
+employee2.salaryCalculater();
+employee3.salaryCalculater();
+employee4.salaryCalculater();
+employee5.salaryCalculater();
+employee6.salaryCalculater();
+employee7.salaryCalculater();
 
-// employee1.render();
-// employee2.render();
-// employee3.render();
-// employee4.render();
-// employee5.render();
-// employee6.render();
-// employee7.render();
+employee1.render();
+employee2.render();
+employee3.render();
+employee4.render();
+employee5.render();
+employee6.render();
+employee7.render();
 
 
 function randomNumber(min, max) {
@@ -94,21 +95,20 @@ function createEmpId() {
 let empForm = document.getElementById('empForm');
 empForm.addEventListener('submit', submitHandler);
 
-function submitHandler(event) {
+function submitHandler(event)
+ {
 
-  event.preventDefault(); // maintain a data when you press on submit button
-
-
-  let fName = event.target.fName.value;
-  let department = event.target.depName.value;
-  let level = event.target.levelName.value;
-  let img = event.target.img.value;
+  event.preventDefault(); // maintain a data when you press on submit button.
+  let fulName = event.target.fName.value;
+  let dep = event.target.depName.value;
+  let lev = event.target.levelName.value;
+  let imag = event.target.img.value;
 
   // // Create new employee object
-  let newEmp = new Employee(fName, department, level, img)
-  {
-    newEmp.render()
-      ;
-  }
+  let newEmp = new Employee(fulName, dep, lev, imag)
+  
+   newEmp.render();
+     
+  
 }
 
