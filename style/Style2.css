@@ -7,14 +7,17 @@ li {
 
 }
 header{
+   width: 2000%;
+   
   
-    width:100px;
+   
 }
 
 
 
  ol {
-    display: inline;
+    display: flex;
+     -ms-flex-align: end;
     list-style-type: none;
 }
 nav{
@@ -80,6 +83,10 @@ a:hover
 
 
  .f {
-    height: 40px;
+    height: 400px;
     background-color: #ccc;
+}
+body
+{
+    background-color: antiquewhite;
 }
