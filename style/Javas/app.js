@@ -56,14 +56,17 @@ Employee.prototype.render = function ()
   let imgEl = document.createElement('img');
   imgEl.src = this.imageURL
   sectionEl.appendChild(imgEl);
-
   let h3E1 = document.createElement('h3');
   h3E1.textContent = `Full Name : ${this.fullName}`;
   sectionEl.appendChild(h3E1);
-
   let h2El = document.createElement('h2');
-  h2El.textContent=`Employee-ID :${createEmpId()}`;
+  h2El.textContent=`Employee -ID: ${createEmpId()}`;
   sectionEl.appendChild(h2El);
+ 
+
+  
+
+  
 
   let h1= document.createElement('h2');
   h1.textContent = `Department : ${this.department}`;
@@ -80,7 +83,7 @@ sectionEl.appendChild(h2Ellll);
 
 
 }
- allEmpcaller(allEmployee);
+ 
 function allEmpcaller()
 {
   for(let i=0;i<allEmployee.length;i++)
@@ -89,23 +92,9 @@ function allEmpcaller()
     allEmployee[i].render();
   }
 }
+allEmpcaller(allEmployee);
 
 
-// employee1.salaryCalculater();
-// employee2.salaryCalculater();
-// employee3.salaryCalculater();
-// employee4.salaryCalculater();
-// employee5.salaryCalculater();
-// employee6.salaryCalculater();
-// employee7.salaryCalculater();
-
-// employee1.render();
-// employee2.render();
-// employee3.render();
-// employee4.render();
-// employee5.render();
-// employee6.render();
-// employee7.render();
 
 
 function randomNumber(min, max) {
@@ -147,7 +136,42 @@ function submitHandler(event)
   let newEmp = new Employee (fullame, department, lev, img)
   
    newEmp.render();
-  
+   saveData(allEmployee);
   
 }
+
+
+
+function saveData(data){
+  let stringArr= JSON.stringify(data);
+  localStorage.setItem('employee', stringArr);
+}
+console.log("before saving in LS", allEmployee[-1])
+
+function getData()
+{
+  let retrievedArr = localStorage.getItem('employee');
+  // console.log(retrievedArr) //string
+  let objArray = JSON.parse(retrievedArr);
+  console.log("after getting from LS ",objArray) // array of objects
+
+  //re-instantiation of new Instances
+  if(objArray != null){
+
+    for (let i = 0; i < objArray.length; i++) {
+      new Employee(createEmpId(),objArray[i].fullName, objArray[i].department, objArray[i].level, objArray[i].imageURL)
+      
+    }
+  }
+ allEmpcaller();
+}
+
+getData();
+
+
+moudle.exports = { Employee,submitHandler };
+
+
+
+
 
