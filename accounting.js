@@ -1,125 +1,177 @@
-
-'use strict';
-
-function Employee (employeeID, fullName, department, level, imageURL)
- {
-    this.employeeID = employeeID;
-    this.fullName = fullName;
-    this.department = department;
-    this.level = level;
-    this.imageURL = imageURL;
-    this.salary = 0;
-    allEmployee.push(this);
-  }
-
- 
-
-
-function renderTable(){
-  // Table header
-const thead = document.createElement('thead');
-const headerRow = document.createElement('tr');
-const headers = ['Department', '# of employees', 'Total Salary', 'Average'];
-headers.forEach(header => {
-  const th = document.createElement('th');
-  th.textContent = header;
-  headerRow.appendChild(th);
-});
-thead.appendChild(headerRow);
-table.appendChild(thead);
-// Table body
-const tbody = document.createElement('tbody');
-let totalEmployees = 0;
-let totalSalary = 0;
-allEmployee.forEach(department => {
-  const { name, employees } = department;
-  const row = document.createElement('tr');
-   // Department name
-   const nameCell = document.createElement('td');
-   nameCell.textContent = name;
-   row.appendChild(nameCell);
-   // Number of employees
-  const employeesCell = document.createElement('td');
-  employeesCell.textContent = employees.length;
-  row.appendChild(employeesCell);
-
-  // Total salary
-  const salaryCell = document.createElement('td');
-  const departmentSalary = employees.reduce((acc, emp) => acc + emp.salary, 0);
-  salaryCell.textContent = departmentSalary.toLocaleString();
-  row.appendChild(salaryCell);
-  
-  // Average salary
-  const averageCell = document.createElement('td');
-  const departmentAverage = departmentSalary / employees.length;
-  averageCell.textContent = departmentAverage.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  row.appendChild(averageCell);
-
-  // Update totals
-  totalEmployees += employees.length;
-  totalSalary += departmentSalary;
-
-  tbody.appendChild(row);
-});
-table.appendChild(tbody);
-
-// Table footer
-const tfoot = document.createElement('tfoot');
-const footerRow = document.createElement('tr');
-const totalEmployeesCell = document.createElement('td');
-totalEmployeesCell.textContent = `Total number of employees: ${totalEmployees}`;
-totalEmployeesCell.colSpan = 2;
-footerRow.appendChild(totalEmployeesCell);
-const totalSalaryCell = document.createElement('td');
-totalSalaryCell.textContent = `Total salary for all departments: ${totalSalary.toLocaleString()}`;
-totalSalaryCell.colSpan = 1;
-footerRow.appendChild(totalSalaryCell);
-const averageSalaryCell = document.createElement('td');
-averageSalaryCell.textContent = `Average salary for all departments: ${(totalSalary / totalEmployees).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-averageSalaryCell.colSpan = 1;
-footerRow.appendChild(averageSalaryCell);
-tfoot.appendChild(footerRow);
-table
-
-  console.log(table);
-  
-}
-  
+"use strict";
+let numa=0,numm=0,numd=0,numf=0;
+let Salarya=0, Salarym=0,Salaryd=0,Salaryf=0;
+let Averagea=0,Averagem=0,Averaged=0,Averagef=0;
 
 renderTable ();
+let table = document.getElementById("table");
+
+              
+
+            let tra = document.createElement('tr');
+             table.appendChild(tra);
+          
+             let tda1 = document.createElement('td');
+             tda1.textContent="Administration";
+             tra.appendChild(tda1);
+          
+             let tda2 = document.createElement('td');
+             tda2.textContent= numa;
+             tra.appendChild(tda2);
+
+               let tda3 = document.createElement('td');
+               tda3.textContent= Salarya;
+               tra.appendChild(tda3);
+               let tda4 = document.createElement('td');
+               tda4.textContent= Averagea;
+               tra.appendChild(tda4);
 
 
-  
-  // let trEL = document.createElement('tr');
-  // table.appendChild(trEL);
-  // let trEL1 = document.createElement('tr');
-  // table.appendChild(trEL1);
-  // let tdEL = document.createElement('td');
-  // trEL.appendChild(tdEL);
-  // let tdEL1 = document.createElement('td');
-  // trEL1.appendChild(tdEL1);
-  // let tdEL2 = document.createElement('td');
-  // trEL.appendChild(tdEL2);
-  // let tdEL3 = document.createElement('td');
-  // trEL.appendChild(tdEL3);
-  // let tdEL4 = document.createElement('td');
-  // trEL.appendChild(tdEL4);
+               let trm = document.createElement('tr');
+               table.appendChild(trm);
+           
+               let tdm1 = document.createElement('td');
+               tdm1.textContent="Marketing";
+               trm.appendChild(tdm1);
+          
+               let tdm2 = document.createElement('td');
+               tdm2.textContent= numm;
+               trm.appendChild(tdm2);
 
-  // let thEl2 = document.createElement('thead');
-  // thEl2.textContent=`Department `;
-  // tdEL.appendChild(thEl2);
+               let tdm3 = document.createElement('td');
+               tdm3.textContent= Salarym;
+               trm.appendChild(tdm3);
+               let tdm4 = document.createElement('td');
+               tdm4.textContent= Averagem;
+               trm.appendChild(tdm4);
 
-  // let thEl3 = document.createElement('thead');
-  // thEl3.textContent='number of employees ';
-  // tdEL2.appendChild(thEl3);
 
-  // let thEl5 = document.createElement('thead');
-  // thEl5.textContent='Average Salary ';
-  // tdEL3.appendChild(thEl5)
+                let trd = document.createElement('tr');
+              table.appendChild(trd);
+          
+              let tdd1 = document.createElement('td');
+              tdd1.textContent="Development";
+              trd.appendChild(tdd1);
+          
+              let tdd2 = document.createElement('td');
+              tdd2.textContent= numd;
+              trd.appendChild(tdd2);
 
-  // let thEl4 = document.createElement('thead');
-  // thEl4.textContent='Total Salary ';
-  // tdEL4.appendChild(thEl4);
-  // let tfEl = document.createElement('tfooter');
-  // tfEl.textContent='Total Salary ';
-  // tdEL1.appendChild(tfEl);
+                let tdd3 = document.createElement('td');
+                tdd3.textContent= Salaryd;
+               trd.appendChild(tdd3);
+                let td44 = document.createElement('td');
+                td44.textContent=Averaged;
+                trd.appendChild(td44);
+     
+                let trf = document.createElement('tr');
+                table.appendChild(trf);
+              let tdf1 = document.createElement('td');
+              tdf1.textContent="Finance";
+              trf.appendChild(tdf1);
+          
+              let tdf2 = document.createElement('td');
+              tdf2.textContent= numf;
+              trf.appendChild(tdf2);
+
+                let tdf3 = document.createElement('td');
+                tdf3.textContent= Salaryf;
+                trf.appendChild(tdf3);
+                let tdf4 = document.createElement('td');
+                tdf4.textContent= Averagef;
+                trf.appendChild(tdf4);
+      
+                let trall = document.createElement('tr');
+                table.appendChild(trall);
+          
+              let tdall1 = document.createElement('th');
+              tdall1.textContent="All Department";
+              trall.appendChild(tdall1);
+          
+              let tdall2 = document.createElement('th');
+              tdall2.textContent= numa+numm+numd+numf;
+              trall.appendChild(tdall2);
+
+                let tdall3 = document.createElement('th');
+                tdall3.textContent= Salarya+Salarym+Salaryd+Salaryf;
+                trall.appendChild(tdall3);
+                let tdall4 = document.createElement('th');
+                tdall4.textContent=Averagea+Averagem+Averaged+Averagef;
+                trall.appendChild(tdall4);
+            
+            
+                function renderTable (){
+                  getNum();
+                  getSalary();
+                  getAverage();
+                }
+
+          function getNum(){
+            
+            
+            let dataArr = localStorage.getItem('Employee');
+            let objArray = JSON.parse(dataArr);
+            for (let i = 0; i < objArray.length; i++) {
+                
+              if(objArray[i].department=="Administration"){
+               numa = numa + 1;
+              }
+               else if(objArray[i].department=="Marketing"){
+                numm = numm + 1;
+            }
+          
+               else if(objArray[i].department=="Development"){
+                  numd = numd + 1;
+            } 
+            else if(objArray[i].department=="Finance"){
+              numf = numf + 1;
+        } 
+
+          }
+            return numa,numm,numd,numf;
+            
+           }
+           function getSalary(){
+            
+          let dataArr = localStorage.getItem('Employee');
+          let objArray = JSON.parse(dataArr);
+          
+            for (let i = 0; i < objArray.length; i++) {
+                
+              if(objArray[i].department=="Administration"){
+                Salarya = Salarya + objArray[i].salary;
+            }
+            else if(objArray[i].department=="Marketing"){
+              Salarym = Salarym + objArray[i].salary;
+          }
+            else if(objArray[i].department=="Development"){
+            Salaryd = Salaryd + objArray[i].salary;
+        }  
+        else if(objArray[i].department=="Finance"){
+          Salaryf = Salaryf + objArray[i].salary;
+      } 
+            } 
+            return Salarya,Salarym,Salaryd,Salaryf;
+           }
+           function getAverage(){
+            
+          let dataArr = localStorage.getItem('Employee');
+          let objArray = JSON.parse(dataArr);
+          
+            for (let i = 0; i < objArray.length; i++) {
+                
+              if(objArray[i].department=="Administration"){
+                Averagea = Math.floor(Salarya / numa);
+            }
+            else if(objArray[i].department=="Marketing"){
+              Averagem = Math.floor(Salarym / numm);
+          }
+          else if(objArray[i].department=="Development"){
+            Averaged = Math.floor(Salaryd / numd);
+        }
+        else if(objArray[i].department=="Finance"){
+          Averagef = Math.floor(Salaryf / numf);
+      }
+            } 
+            return Averagea,Averagem,Averaged,Averagef;
+           }
