@@ -12,4 +12,25 @@ table, th, td ,tr{
     
   }
   
+  header  {
+    background-color: #cbf028;
+    padding: 10px;
+} 
+
+a{
+    margin-left: 40px;
+}
+  ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+}
+  header{
+    padding: 10px;
+  
+  }
+    
+
+  
   

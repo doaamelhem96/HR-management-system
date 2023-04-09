@@ -1,12 +1,12 @@
 "use strict";
-let numa=0,numm=0,numd=0,numf=0;
+let num1=0,num2=0,num3=0,num4=0;
 let Salarya=0, Salarym=0,Salaryd=0,Salaryf=0;
 let Averagea=0,Averagem=0,Averaged=0,Averagef=0;
 
 renderTable ();
 let table = document.getElementById("table");
 
-              
+
 
             let tra = document.createElement('tr');
              table.appendChild(tra);
@@ -16,7 +16,7 @@ let table = document.getElementById("table");
              tra.appendChild(tda1);
           
              let tda2 = document.createElement('td');
-             tda2.textContent= numa;
+             tda2.textContent= num1;
              tra.appendChild(tda2);
 
                let tda3 = document.createElement('td');
@@ -35,7 +35,7 @@ let table = document.getElementById("table");
                trm.appendChild(tdm1);
           
                let tdm2 = document.createElement('td');
-               tdm2.textContent= numm;
+               tdm2.textContent= num2;
                trm.appendChild(tdm2);
 
                let tdm3 = document.createElement('td');
@@ -54,7 +54,7 @@ let table = document.getElementById("table");
               trd.appendChild(tdd1);
           
               let tdd2 = document.createElement('td');
-              tdd2.textContent= numd;
+              tdd2.textContent= num3;
               trd.appendChild(tdd2);
 
                 let tdd3 = document.createElement('td');
@@ -71,7 +71,7 @@ let table = document.getElementById("table");
               trf.appendChild(tdf1);
           
               let tdf2 = document.createElement('td');
-              tdf2.textContent= numf;
+              tdf2.textContent= num4;
               trf.appendChild(tdf2);
 
                 let tdf3 = document.createElement('td');
@@ -89,7 +89,7 @@ let table = document.getElementById("table");
               trall.appendChild(tdall1);
           
               let tdall2 = document.createElement('th');
-              tdall2.textContent= numa+numm+numd+numf;
+              tdall2.textContent= num1+num2+num3+num4;
               trall.appendChild(tdall2);
 
                 let tdall3 = document.createElement('th');
@@ -114,21 +114,21 @@ let table = document.getElementById("table");
             for (let i = 0; i < objArray.length; i++) {
                 
               if(objArray[i].department=="Administration"){
-               numa = numa + 1;
+               num1 = num1 + 1;
               }
                else if(objArray[i].department=="Marketing"){
-                numm = numm + 1;
+                num2 = num2 + 1;
             }
           
                else if(objArray[i].department=="Development"){
-                  numd = numd + 1;
+                  num3 = num3 + 1;
             } 
             else if(objArray[i].department=="Finance"){
-              numf = numf + 1;
+              num4 = num4 + 1;
         } 
 
           }
-            return numa,numm,numd,numf;
+            return num1,num2,num3,num4;
             
            }
            function getSalary(){
@@ -161,16 +161,16 @@ let table = document.getElementById("table");
             for (let i = 0; i < objArray.length; i++) {
                 
               if(objArray[i].department=="Administration"){
-                Averagea = Math.floor(Salarya / numa);
+                Averagea = Math.floor(Salarya / num1);
             }
             else if(objArray[i].department=="Marketing"){
-              Averagem = Math.floor(Salarym / numm);
+              Averagem = Math.floor(Salarym / num2);
           }
           else if(objArray[i].department=="Development"){
-            Averaged = Math.floor(Salaryd / numd);
+            Averaged = Math.floor(Salaryd / num3);
         }
         else if(objArray[i].department=="Finance"){
-          Averagef = Math.floor(Salaryf / numf);
+          Averagef = Math.floor(Salaryf / num4);
       }
             } 
             return Averagea,Averagem,Averaged,Averagef;

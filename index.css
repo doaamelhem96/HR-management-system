@@ -1,12 +1,14 @@
 body{
     min-height: 100vh;
-    background-color: rgba(221, 228, 235, 0.61);
+   background-color: beige;
     flex-direction: column;
+   
+
 }
 
 header ,footer {
-    background-color: rgb(197, 209, 226);
-    padding: 15px;
+    background-color: #cbf028;
+    padding: 10px;
 } 
 footer{
     margin-top: auto;
@@ -20,11 +22,13 @@ ul li {
 ul li a {
     text-decoration: none;
 }
-form{background-color:#bac7e0;
-    border:black solid 1px;
+form{
+  background-color: rgb(209, 229, 111);
+  border-radius: 20px;
+  border-style: groove;
     font-size: 20px;
     margin-top: 30px;
-     margin-right: 900px;
+  
 }
 section{
     text-align: center;
@@ -32,7 +36,7 @@ section{
     
 }
 div{
-    background-color:#ddd;
+    background-color:#cbf028;
     display: inline-block ; 
     margin: 20px  ;
 }
