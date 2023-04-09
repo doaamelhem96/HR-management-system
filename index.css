@@ -1,0 +1,47 @@
+body{
+    min-height: 100vh;
+   background-color: beige;
+    flex-direction: column;
+   
+
+}
+
+header ,footer {
+    background-color: #cbf028;
+    padding: 10px;
+} 
+footer{
+    margin-top: auto;
+}
+a{
+    margin-left: 40px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+}
+form{
+  background-color: rgb(209, 229, 111);
+  border-radius: 20px;
+  border-style: groove;
+    font-size: 20px;
+    margin-top: 30px;
+  
+}
+section{
+    text-align: center;
+    
+    
+}
+div{
+    background-color:#cbf028;
+    display: inline-block ; 
+    margin: 20px  ;
+}
+img{
+    margin:20px ;
+    width :350px ;
+    height : 350px ;
+}

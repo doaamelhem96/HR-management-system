@@ -1,0 +1,36 @@
+table, th, td ,tr{
+    border-collapse: collapse;
+    border: 1px solid;
+    text-align: center;
+  }
+  table {
+    width: 50%;
+    
+  }
+   td { 
+    font-size: medium ;
+    
+  }
+  
+  header  {
+    background-color: #cbf028;
+    padding: 10px;
+} 
+
+a{
+    margin-left: 40px;
+}
+  ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+}
+  header{
+    padding: 10px;
+  
+  }
+    
+
+  
+  
